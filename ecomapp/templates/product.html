@@ -1,8 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class='col-sm-4'>
-<img src='{{ product.image.url }}' style='width:80%; height: 250px;'>
+
+    <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url({% static 'img/bg8.jpg' %})">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h2 class="title">Продукт</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+ <div class="main main-raised">
+    <div class="container">
+      <div class="card card-plain">
+        <div class="card-body">
+          <div class="table-responsive">
+
+            <div class='col-sm-4'>
+<img src='{{ product.image.url }}' style='width:80%; height: 80%;'>
 </div>
 <div class='col-sm-8'>
 <h3 class='text-center'>{{ product.title }}</h3>
@@ -14,6 +33,17 @@
 <br><br>
 {% if not request.user.is_authenticated %}<p class='text-center'>Заказывать товар могут только авторизированные пользователи. Пожалуйста, <a href='{% url "login" %}'>войдите</a> или <a href='{% url "registration" %}'>зарегистрируйтесь</a></p>{% endif %}
 </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 <script src='{% static "js/jquery.js" %}'></script>
 <script>
     $(document).ready(function(){
