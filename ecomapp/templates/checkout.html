@@ -1,8 +1,27 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
-<h3 class='text-center'>Ваш предварительный заказ</h3>
+
+
+<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url({% static 'img/bg8.jpg' %})">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h3
+                  class="title">Ваш предварительный заказ</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="main main-raised">
+    <div class="container">
+      <div class="card card-plain">
+        <div class="card-body">
+          <div class="table-responsive">
+
 <br>
 <table class='table'>
     <tr>
@@ -29,4 +48,16 @@
 <a href='{% url "create_order" %}' class='pull-right'>
     <button class='btn btn-success'>Оформить заказ</button>
 </a>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 {% endblock content %}

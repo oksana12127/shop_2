@@ -2,7 +2,31 @@
 {% load static %}
 
 {% block content %}
-<h3 class='text-center'>Ваша корзина</h3>
+
+
+
+
+
+<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url({% static 'img/bg8.jpg' %})">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h3 class="title">Ваша корзина</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="main main-raised">
+    <div class="container">
+      <div class="card card-plain">
+        <div class="card-body">
+          <div class="table-responsive">
+
+
+
+
 <br>
 {% if cart.items.count > 0 %}
 <div class='my-cart'>
@@ -39,6 +63,18 @@
 {% else %}
 <h3 class='text-center'>Ваша корзина пуста</h3>
 {% endif %}
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 <script src="{% static 'js/jquery.js' %}"></script>
 <script>
 $(document).ready(function(){
